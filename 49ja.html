@@ -1,0 +1,603 @@
+<html>
+ <head>
+      <title>49ja</title>
+      <style>
+	 body{margin:0px; color:#333;background:#f1f1f1;font-size:14px;}
+  	 #container1{
+	   background:linear-gradient(rgb(58, 62, 71) 0%, rgb(43, 46, 55) 100%);
+	   padding:0px;
+	   height:80px;
+	   display:flex;
+	    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-size: 14px;
+            font-weight:bold;
+            color: #333; 
+  	 }
+	#bet9jaLogo{
+	   position:relative;
+	   width:100px;
+	   height:70px;
+	   border:2px solid #ffffff;
+	   background:#ffffff;
+	   margin:2px 5px 0 50px; 
+          
+	}
+	#nav{
+	   margin:30px 5px 0 20px;
+	}
+	a{
+  	  padding:10px;
+	  color:#ffffff;
+	  text-decoration:none;
+	}
+	a:hover{
+	  color:#0033cc;
+        }
+	#container2{
+	  background:#13171e;
+	  text-align:center;
+	  height:75px;
+	  display:flex;
+	  color:#ffffff;
+	  width:100%;  
+	}
+	#jaLogo{
+	  position:relative;
+	   width:100px;
+	   height:50px;
+	   border:2px solid #ffffff;
+	   background:#ffffff;
+	   margin:2px 10px 50px 50px;
+	}
+	#controlsCon{	
+	   margin:30px 30px 20px 10px; 
+	   height:35px;
+	   width:200px;
+	   display:flex; 
+	}
+	.controls{
+	  position:relative;
+	  background:linear-gradient(#666666 0%, rgb(0, 0, 0) 120%) ;
+	  height:100%;
+          width:100%;
+	  margin-right:1px;
+	  border:none;
+	  color:#ffffff;
+	  cursor:pointer;
+        }
+	#timer{
+	  color:#ffcc00;
+          border: 2px solid rgb(58, 62, 71);
+	  width:85px;
+	  height:35px;
+	  text-align:center;
+	  border-radius:50px;
+	  padding:0;
+	  margin:10px 150px 0px 150px;
+	  line-height:1.5;
+	  font-weight:bold;
+	  font-size:25px;
+	  background:rgb(43, 46, 55); 
+      }
+   
+	#balance{
+	 position:absolute;
+	top:120px;
+	left:910px;
+	width:150px;
+	height:20px;
+	border: 2px solid gray;
+	border-radius:50px;
+	background:rgb(43, 46, 55);
+	font-size:12px;
+	}
+	#searchInput{ width:500px;}
+	.search{ float:left;height:30px; width:150px;}
+	#i{
+	  height:30px; 
+	  width:20px;
+	  margin-right:-4px;
+	  background:#5498dd;
+	  border:none;
+	  color:#ffffff;
+	  font-size:12px;
+	  font-weight:bold;
+        } 
+	 #main{ width:650px;border:2px solid red; position:relative;  }
+	#container3{
+	   background:#fff;
+	   margin:2px 0px 2px 50px;
+	   display:flex;
+	   flex-wrap:wrap;
+	   flex-direction:row;
+	   height:370px;
+	   width:580px;
+	   border:2px solid red;
+	  }
+	 #btnContainer{
+	   position:relative;
+	   background:#fff;
+	   width:450px;
+	   padding-left:3px;
+	   margin-top:2px;
+	   margin-bottom:0px;
+	   
+	  }	
+	 ul li{
+	 list-style:none;
+	 line-height:2;
+	 display:inline-block;
+	 cursor:pointer;
+	 padding:0.5px;
+	}
+	.btns{
+	 border-radius:100px;
+	 height:35px;
+	 width:35px;
+	 margin:3px;
+	 border:2px solid;
+	 color:#000;
+	 font-weight:bold;
+	 text-align:center;
+	 line-height:35px
+	}
+	#clr{
+	   border:1px ridge #f1f1f1;
+	   background:inherit;
+	   height:30px;
+	   margin-left:5px;
+	   color:#5498dd;
+        }
+	#clr:hover{
+	  cursor:pointer;
+	  color:#333;
+	  border:2px ridge #f1f1f1;
+	}
+	#selectionType{
+	   width:50px;
+	   display:flex;
+	   flex-direction:column;
+	   flex-grow:3;
+	   height:89-3%;
+	  
+	}
+	.selection{
+	  flex-grow:3;
+	   width:100px;
+	  padding:5px;
+	  margin:3px 3px -2px 3px;
+	  background:#f1f1f1;
+	  text-align:center;
+	  line-height:5;
+	 	}
+	#selectNumbers{ 
+	   width:40%;
+	   height:12%;
+	   margin-left:2px;
+	   margin-top:4px; 
+	}
+	.selectNum{	
+	  position:relative;
+	  background:linear-gradient(rgb(58, 62, 71) 0%, rgb(43, 46, 55) 100%);
+	  margin-right:-3px;
+	  border:none;
+	  color:#ffffff;
+	  cursor:pointer;
+	  width:30px;
+	  padding:3px;
+	}
+	#container4{
+	   background:#fff;
+	   width:580px;
+	   height:45%;
+	   margin:10px 0px 2px 50px;
+	   display:flex;
+	   flex-wrap:wrap;
+	   flex-direction:row;
+	   border:2px solid red;
+	 }
+	#winingColor{
+	    border:2px solid red;
+	    padding:0px;
+	    width:50%;
+	    margin:5px 10px 0px 0px; 	   
+	}
+	.win{
+	 width:23%;
+	 margin:2px -7px 0px 3px;
+	 padding:2px;
+	 height:30px;
+	}
+	#numberColor{ 
+	  border:2px solid red;
+	  width:270px;
+	}
+	#numSelection{
+	    padding:2px;
+	    margin:0px;
+	    width:100%;	 
+	 }
+	.num{
+	   width:39px;
+	   height:35px;
+	   margin:2px 0px 0px 0px;
+	   box-shadow: 1px 1px 0.5px #000;
+	   border-radius:3px;
+	 }
+	.red{background:#d63939;color:#fff;}	
+	.blue{background:#5498dd;color:#fff;}	
+	.yellow{background:#f9d148;color:#000;}	
+	
+	
+	#container5{
+	  background:#fff;
+	   width:430;
+	   border:2px solid red;
+	   margin:2px 0px 2px 10px;
+        }
+	.fl{float:left;}
+	#dem{
+	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+          backkground-repeat: repeat-x;
+	  height:8px;
+	  margin:5px 10px 10px 10px;
+	  
+	}
+	#gameShow{
+	  display:flex;
+	  flex-direction:column;
+	}
+	#type{
+	 background:#f1f1f1;
+	}
+	.reg{padding-left:10px;  border:1.5px ridge #fff;}
+	input{width:80px; padding:3px; margin-right:5px;}
+	#confirm{background:#3c991f;
+	   box-shadow:inset 0 1px 1px rgba(0,0,0,0.15);
+	   border-radius:2px;
+	   border:none;
+	   float:right;
+	   width:80px;
+	   color:#fff;
+	   height:30px;
+	   font-weight:bold;
+	}
+	/* js class */
+	.klone{
+	   width:30px;
+	   height:30px;
+	   border-radius:100px;
+	   margin:5px;
+	   text-align:center;
+	   font-size:14px;
+	}
+	#light{
+	  background:rgb(43, 46, 55);
+	  color:#fff;
+	  font-weight:bold;
+	  cursor:pointer
+         }
+      </style>
+   </head>
+   <body>
+     <div id='container1'>
+        <div id='bet9jaLogo'></div>
+        <div id='nav'>
+           <a href='#sport'>SPORT</a>
+	   <a href='#liveBetting'>LIVEBETTING</a>
+	   <a href='#racing'>RACING</a>
+        </div>       
+     </div>   
+
+      <div id='container2'>
+	 <div id='jaLogo'></div>      
+	 <div id='controlsCon'>
+	    <button class='controls'>Home</button>
+	    <button class='controls'>Coupons</button>
+	    <button class='controls'>Draws</button>
+	    <button class='controls'>Odds</button>
+	    <button class='controls'>Rules</button>
+	 </div>
+	 <div>
+	    <div id='timer'>4:00</div>
+	    <div id='nextDraw' style=' margin-top: 10px; margin-left:150px; font-size:12px; width:100px;'>Next Draw:73334</div>
+	 </div>
+	 <div id='searchInput'>
+	    <input class='search' type='text' placeHolder='Search Coupon' />
+	    <div class='search'>
+	      <button id='i'>i</button>
+	      <input type='text' style='height:30px; width:120px;' placeHolder='Quick Bet' />
+	    </div> 
+	   <div id='balance'>Balance:</div>  
+	 </div>
+	
+     </div>
+
+      <hr style="background-color:red; margin-top:0px; height:3px;"/>
+     <div id='main'  class='fl'>
+         <div id='container3'>
+	    <ul id='btnContainer'>
+	      <div>Numbers</div>
+              <li class='btns'>1</li>
+	      <li  class='btns'>2</li>
+              <li  class='btns'>3</li>
+	      <li  class='btns'>4</li>
+	      <li  class='btns'>5</li>
+	      <li  class='btns'>6</li>
+              <li  class='btns'>7</li>
+	      <li  class='btns'>8</li>
+	      <li  class='btns'>9</li>
+	      <li  class='btns'>10</li>
+              <li  class='btns'>11</li>
+	      <li  class='btns'>12</li>
+	      <li  class='btns'>13</li>
+	      <li  class='btns'>14</li>
+              <li  class='btns'>15</li>
+	      <li  class='btns'>16</li>
+	      <li  class='btns'>17</li>
+	      <li  class='btns'>18</li>
+              <li  class='btns'>19</li>
+	      <li  class='btns'>20</li>
+	      <li  class='btns'>21</li>
+	      <li  class='btns'>22</li>
+              <li  class='btns'>23</li>
+	      <li  class='btns'>24</li>
+	      <li  class='btns'>25</li>
+	      <li  class='btns'>26</li>
+              <li  class='btns'>27</li>
+	      <li  class='btns'>28</li>
+	      <li  class='btns'>29</li>
+	      <li  class='btns'>30</li>
+              <li  class='btns'>31</li>
+	      <li  class='btns'>32</li>
+	      <li  class='btns'>33</li>
+	      <li  class='btns'>34</li>
+              <li  class='btns'>35</li>
+	      <li  class='btns'>36</li>
+	      <li  class='btns'>37</li>
+	      <li  class='btns'>38</li>
+              <li  class='btns'>39</li>
+	      <li  class='btns'>40</li>
+	      <li  class='btns'>41</li>
+	      <li  class='btns'>42</li>
+              <li  class='btns'>43</li>
+	      <li  class='btns'>44</li>
+	      <li  class='btns'>45</li>
+	      <li  class='btns'>46</li>
+              <li  class='btns'>47</li>
+	      <li  class='btns'>48</li>
+	      <li  class='btns'>48</li>
+	      <li  class='btns' style='border:2px solid #333; background-color:#bfbfbf;'><span>49</span></li>
+              <button id='clr'>Clear selection</button>
+	  </ul>
+	  <div id='selectionType'>
+	       <div class='selection' id='ja'>4ja</div>
+	       <div class='selection' id='drag'>Dragon</div>
+	       <div class='selection' id='beto'>Bet 0</div>       	  
+	   </div>
+	   <div id='selectNumbers'>
+	       <div>Select Numbers:</div>  
+               <button class='selectNum'>6</button>
+	       <button class='selectNum'>7</button>
+	       <button class='selectNum'>8</button>
+	       <button class='selectNum'>9</button>
+	       <button class='selectNum'>10</button>
+               <button class='selectNum'>15</button>
+	       <button class='selectNum'>20</button>
+	    </div> 
+     </div>	       
+    <div id='container4' >
+	   <ul id='winingColor'>
+	     <div >Winning Color</div> 
+              <li  class='win' style='background-color:#d63939; color:#fff;'><span>Red</span></li>
+	      <li  class='win' style='background-color:#f9d148; color:#fff;'><span>Yellow</span></li>
+              <li  class='win' style='background-color:#5498dd; color:#fff;'><span>Blue</span></li>
+	      <li  class='win' style='background-color:#333; color:#fff;'><span>Draw</span></li>
+	   </ul>
+         <div id='numberColor'>
+	      <div>Number of Colors</div>
+	      <ul id='numSelection'>
+	        <li class='num red'><span>0</span></li>
+		<li class='num red'><span>2+</span></li>
+		<li class='num red'><span>3+</span></li>
+		<li class='num red'><span>4+</span></li>
+		<li class='num red'><span>5+</span></li>
+		<li class='num red'><span>6</span></li>
+	      </ul>
+	      <ul id='numSelection'>
+		<li class='num blue'><span>0</span></li>
+		<li class='num blue'><span>2+</span></li>
+		<li class='num blue'><span>3+</span></li>
+		<li class='num blue'><span>4+</span></li>
+		<li class='num blue'><span>5+</span></li>
+		<li class='num blue'><span>6</span></li>
+	     </ul>
+	     <ul id='numSelection'>   
+		<li class='num yellow'><span>0</span></li>
+		<li class='num yellow'><span>2+</span></li>
+		<li class='num yellow'><span>3+</span></li>
+		<li class='num yellow'><span>4+</span></li>
+		<li class='num yellow'><span>5+</span></li>
+		<li class='num yellow'><span>6</span></li>
+	      </ul>
+	   </div>
+	</div>
+</div>
+<div id='container5' class='fl'>
+	<div>
+	   <span>Coupons</span>
+	   <span style='float:right'>Clear All</span>
+	   <span id='noBet'></span>
+	</div>
+	<div id='dem'><span style="visibility:hidden;">no show</span></div>
+	<div id='gameShow'>
+	   <div id='type'>
+	       <div class='reg' style='background:linear-gradient(to bottom, #9ea9b1 0%, #88949f 100%); height: 18px;background-repeat: repeat-x;'>
+	          <span id='gameType'>Bet 0</span> 
+	          <span id='cancelGameType' style='float:right;'>x</span>
+	        </div>
+	        <ul id='gameContent' class='reg'></ul>
+		<div id='jaStake' >
+		   <div>
+		     <span><input type='checkbox' style='width:0px;'>1 Matched</span>
+		     <span style='margin-left:25px;'>
+			<span id='txm'>6x</span>
+		        <input type='text' value='0.000'/>
+		      </span>
+		      <span style='float:right'> Total<input id='stake' type='text' value='100'></span>
+                   </div>
+		    <div>
+		       <span><input type='checkbox' style='width:0px;'>2 Matched</span>
+		       <span style='margin-left:25px;'>
+			  <span id='txm'>6x</span>
+		          <input type='text' value='0.000'/>
+			</span>
+		        <span style='float:right'> Total<input id='stake' type='text' value='100'></span>
+                    </div>
+		    <div>
+		       <span><input type='checkbox' style='width:0px;'>3 Matched</span>
+		       <span style='margin-left:25px;'>
+			  <span id='txm'>6x</span>
+		          <input type='text' value='0.000'/>
+		       </span>
+		       <span style='float:right'> Total<input id='stake' type='text' value='100'></span>
+                   </div>
+		    <div>
+		       <span><input type='checkbox' style='width:0px;'>4 Matched</span>
+		       <span style='margin-left:25px;'>
+		         <span id='txm'>6x</span>
+		         <input type='text' value='0.000'/>
+			</span>
+		      <span style='float:right'> Total<input id='stake' type='text' value='100'></span>
+                   </div>
+		   <div>
+		     <span><input type='checkbox' style='width:0px;'>5 Matched</span>
+		     <span style='margin-left:25px;'>
+			<span id='txm'>6x</span>
+		        <input type='text' value='0.000'/>
+		      </span>
+		      <span style='float:right'> Total<input id='stake' type='text' value='100'></span>
+                  </div>
+	       </div>
+	        <div id='stake' class='reg'>
+		   <span style='float:right'>Total<input id='stake' type='text' value='100'></span>
+		</div>
+	       <div id='pot' class='reg'>
+		  <span>Potential Win:</span>
+		  <span>Potential min Win:</span>
+		  <span>Potential max Win:</span>
+	    </div>
+	    </div>
+	    <div id='all' class='reg'>
+	       <span id='repeat'>Repeat:
+	          <select>
+	            <option>1</option>
+		     <option>2</option>
+		     <option>5</option>
+		     <option>10</option>
+		     <option>20</option>
+		     <option>25</option>
+		     <option>50</option>
+	          </select>
+	    </span>
+	    <span id='totalStake' style='margin:2px 50px 2px 30px'>Total Stake:</span>
+	    <button id='confirm'>Confirm</button>
+       </div> 
+    </div> 
+  </div>
+   <script>
+      console.log('active');
+    
+      var btns=document.getElementsByClassName('btns');
+      var color=['rgb(252, 239, 239)', 'rgb(254, 246, 220)' ,'rgb(224, 237, 249)' ];
+      var borderColor=['rgb(214, 57, 57)', 'rgb(249, 209, 72)', 'rgb(84, 152, 221)'];
+      var k=0, i=0;
+      
+    //adds the color style to the number respectively
+      for(i=0; i < btns.length -1; ++i){
+	btns[i].style.backgroundColor=color[k];
+	btns[i].style.borderColor=borderColor[k];
+	if(k >= 2)k=0;
+	else ++k;
+      }
+       var cah=0, track=0, cahC=0, ins=0, clone=null, prac=[], counter=0;
+       var total=document.getElementById('gameContent');
+       var con= document.getElementById('container3');
+       var drag= document.getElementById('drag');
+       var ja= document.getElementById('ja');
+       var beto= document.getElementById('beto');
+      	
+   
+       //hide the content
+	  var gameShow=document.getElementById('gameShow');
+           //gameShow.style.display='none'; 
+	   var lib={
+	     rmMethod: function remove(arr, index){
+	       arr[index]='';
+	       var len=arr.length -1;
+	       var cac=arr[len];
+	       var t= arr.indexOf('');
+	       var e=arr.indexOf(cac);
+	       arr[t]=arr[e];
+	       arr.pop();
+              },
+	    };
+      //evt function makes the numbers clickable in their respective color
+ 	function evt(){
+	 cah=event.target.style.borderColor;
+	 cahC=event.target.style.backgroundColor;
+	   if(event.target.style.backgroundColor== color[0] ||
+	      event.target.style.backgroundColor== color[1] ||
+	      event.target.style.backgroundColor== color[2] ||
+	      event.target.style.backgroundColor=== "rgb(191, 191, 191)"){
+	        event.target.style.backgroundColor=cah;
+	        event.target.style.color='#fff';
+		clone=event.target.cloneNode(true);
+		clone.className='klone';
+		prac.push(clone);
+		for(i=0; i< prac.length; ++i){
+		   total.appendChild(prac[i]);
+    		}
+		if(prac.length >= 20) con.removeEventListener('click', evt);
+		counter+=1;
+	   }else if(event.target.style.backgroundColor== borderColor[0] ||
+	      event.target.style.backgroundColor== borderColor[1] ||
+	      event.target.style.backgroundColor== borderColor[2] ||
+	      event.target.style.backgroundColor== 'rgb(51, 51, 51)' ){
+		if(event.target.style.backgroundColor==borderColor[0]){
+	          event.target.style.backgroundColor=color[0]
+		  event.target.style.color='#000'
+	        } else if(event.target.style.backgroundColor==borderColor[1]){
+	          event.target.style.backgroundColor=color[1]
+		  event.target.style.color='#000'
+	        } else if(event.target.style.backgroundColor==borderColor[2]){
+	          event.target.style.backgroundColor=color[2]
+		  event.target.style.color='#000'
+	        } else if(event.target.style.backgroundColor=='rgb(51, 51, 51)'){
+	          event.target.style.backgroundColor='rgb(191, 191, 191)';
+		  event.target.style.color='#000'
+	        }
+		   c=event.target.textContent;
+		   for(i=0; i < prac.length; ++i){
+		     if(c === prac[i].textContent){
+		       total.removeChild(prac[i]);
+		       lib.rmMethod(prac, i);
+		    }
+		  }
+		  counter-=1;
+	   }
+	   if(counter == 6 || counter == 10 || counter == 15 || counter == 20){
+		drag.id='light', ja.id='light', beto.id='light';
+
+           }else if(counter < 6 || counter > 10 || counter > 15){
+		drag.id='drag', ja.id='light', beto.id='light';
+	    }
+	   if(event.target.textContent=='49ja')console.log('49ja');
+	}
+	
+	con.addEventListener('click', evt);
+console.log(prac);
+    
+   </script>
+  </body>
+  </html>
